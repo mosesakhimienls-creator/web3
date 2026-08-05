@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mosbrain Global Tech</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+header {
+    background: #0b0f19;
+    color: #fff;
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: #00d4ff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #00d4ff;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #0b0f19, #111a2f);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 50px;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #00d4ff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* SECTION */
+section {
+    padding: 80px 50px;
+}
+
+/* SERVICES */
+.services {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    flex: 1 1 250px;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: #111a2f;
+    color: #fff;
+}
+
+.stat h3 {
+    font-size: 40px;
+}
+
+/* PORTFOLIO */
+.portfolio {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    flex: 1 1 250px;
+    background: #ddd;
+    padding: 50px;
+    text-align: center;
+}
+
+/* TEAM */
+.team {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    flex: 1 1 250px;
+    text-align: center;
+}
+
+/* CONTACT */
+form {
+    max-width: 500px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+form button {
+    background: #0b0f19;
+    color: #fff;
+    padding: 10px;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    background: #0b0f19;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #0b0f19;
+        position: absolute;
+        top: 60px;
+        right: 0;
+    }
+
+    nav ul.show {
+        display: block;
+    }
+
+    .menu-btn {
+        cursor: pointer;
+    }
+
+    .stats {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h1>Mosbrain Tech</h1>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div>
+        <h2>Innovative Tech Solutions</h2>
+        <p>We build websites, apps, and digital experiences</p>
+        <a href="#contact" class="btn">Get Started</a>
+    </div>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-box">
+            <h3>Web Development</h3>
+            <p>Modern responsive websites</p>
+        </div>
+        <div class="service-box">
+            <h3>Mobile Apps</h3>
+            <p>iOS & Android app solutions</p>
+        </div>
+        <div class="service-box">
+            <h3>Digital Marketing</h3>
+            <p>Facebook, Google Ads campaigns</p>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stat">
+        <h3 id="clients">0</h3>
+        <p>Clients</p>
+    </div>
+    <div class="stat">
+        <h3 id="projects">0</h3>
+        <p>Projects</p>
+    </div>
+    <div class="stat">
+        <h3 id="awards">0</h3>
+        <p>Awards</p>
+    </div>
+</section>
+
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+        <div class="portfolio-item">Project 1</div>
+        <div class="portfolio-item">Project 2</div>
+        <div class="portfolio-item">Project 3</div>
+    </div>
+</section>
+
+<section id="team">
+    <h2>Our Team</h2>
+    <div class="team">
+        <div class="team-member">
+            <h3>Moses Akhimien</h3>
+            <p>CEO / Developer</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="return sendMessage()">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2026 Mosbrain Global Tech</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+}
+
+// COUNTER ANIMATION
+function animateCounter(id, target) {
+    let count = 0;
+    let interval = setInterval(() => {
+        count++;
+        document.getElementById(id).innerText = count;
+        if (count >= target) clearInterval(interval);
+    }, 30);
+}
+
+window.onload = function() {
+    animateCounter("clients", 120);
+    animateCounter("projects", 75);
+    animateCounter("awards", 15);
+}
+
+// FORM VALIDATION
+function sendMessage() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill all fields");
+        return false;
+    }
+
+    alert("Message sent successfully!");
+    return true;
+}
+
+// SMOOTH SCROLL
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+</body>
+</html>
